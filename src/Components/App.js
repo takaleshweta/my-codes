@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import css from './react_style.css';
 
-class App extends Component {
+class CalcApp extends Component {
     render() {
         return (
-            <div>
-                <h1>My react App</h1>
-            </div>
+            <section>
+                <h1>Calculator</h1>
+                <div className={css.mainWrapper}>
+                
+                </div>
+            </section>
         )
     }
 }
 
-export default App;
+export default CalcApp;
