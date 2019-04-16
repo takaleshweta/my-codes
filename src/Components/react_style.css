@@ -2,4 +2,35 @@
     background-color: darkcyan;
     height: 250px;
     width: 250px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+    padding: 0 2px 2px;
+}
+
+.enterInputWrapper {
+    display: grid;
+    grid-column: 1 / 5;
+    grid-row: 1;
+}
+
+.inputText {
+    padding: 0 8px;
+    font-size: 16px;
+    text-align: right;
+}
+
+input[type='button'] {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.equalToButton {
+    grid-column: 4 / 5;
+    grid-row: 5 / 7;
+}
+
+.zeroButton {
+    grid-row: 6;
+    grid-column: 2 / 4;
 }
