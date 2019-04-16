@@ -73,7 +73,7 @@ class CalcApp extends Component {
           <input
             type="button"
             value="X"
-            onClick={() => this.getInputValues('X')}
+            onClick={() => this.getInputValues('*')}
             onKeyPress={e => this.uniKeyCode(e)}
           />
           
