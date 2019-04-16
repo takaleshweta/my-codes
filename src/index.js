@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CalcApp from './Components/App';
+import MainApp from './common-components/App';
 
-ReactDOM.render(<CalcApp />, document.getElementById('calcApp'));
+ReactDOM.render(<MainApp />, document.getElementById('react-app'));

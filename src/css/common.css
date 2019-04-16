@@ -1,0 +1,55 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(to top right, #ff8cb4 0%, #FC427B 100%);
+}
+
+div, section {
+    box-sizing: border-box;
+}
+
+body > section {
+    height: 100%;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background: #c44569;
+    display: flex;
+    color: #f7d794;
+}
+
+header h1 {
+    margin: auto;
+    text-align: center;
+}
+
+.mainWrapper {
+    height: calc(100% - 50px);
+    width: 100%;
+}
+
+.componentButtons {
+    margin: 16px 16px 16px 0;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #337ab7;
+    border: 1px solid #337ab7;
+    color: #fff;
+    height: 60px;
+    cursor: pointer;
+}
+
+.componentButtons:first-child {
+    margin-left: 16px;
+}
+
+.padding16px {
+    padding: 16px;
+}
