@@ -2,3 +2,24 @@
     height: 100%;
     width: 100%;
 }
+
+.inputWrapper {
+    border: 1px solid #999999;
+    background-color: aliceblue;
+    outline: none;
+    border-radius: 3px;
+    width: calc(100% - 30px);
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.todoListWrapper {
+    height: calc(100% - 58px);
+    width: 100%;
+}
+
+.addButton {
+    width: 30px;
+}

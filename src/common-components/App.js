@@ -38,7 +38,11 @@ export default class MainApp extends Component {
       <Fragment>
         <header>
           {selectedComponent ? (
-            <button type="button" onClick={() => this.selectComponent('')}>
+            <button
+              className={css.backArrow}
+              type="button"
+              onClick={() => this.selectComponent('')}
+            >
               {'<'}
             </button>
           ) : null}

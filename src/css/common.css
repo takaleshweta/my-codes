@@ -5,7 +5,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    background: linear-gradient(to top right, #ff8cb4 0%, #FC427B 100%);
+    background: #EFEEEE;
 }
 
 div, section {
@@ -19,9 +19,9 @@ body > section {
 header {
     height: 50px;
     width: 100%;
-    background: #c44569;
+    background: #4AB19D;
     display: flex;
-    color: #f7d794;
+    color: #000;
 }
 
 header h1 {
@@ -52,4 +52,13 @@ header h1 {
 
 .padding16px {
     padding: 16px;
+}
+
+.backArrow {
+    padding: 8px;
+    width: 25px;
+    margin: 8px;
+    background: #00BCD4;
+    border: 1px solid cornflowerblue;
+    cursor: pointer;
 }

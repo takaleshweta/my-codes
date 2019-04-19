@@ -13,7 +13,7 @@ export default class DecorateComponent extends React.Component{
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.selectedComponent !== prevState.selectedComponent) {
       return {
-        selectedComponent: nextProps.selectedComponent,
+        // selectedComponent: nextProps.selectedComponent,
       };
     }
     return null;
@@ -23,26 +23,31 @@ export default class DecorateComponent extends React.Component{
     const { selectedApp, selectedComponent, selectComponent } = this.props;
     return (
       <Fragment>
-        {selectedApp.map(value => {
+        {selectedComponent ? selectedApp.map(value => {
           let DecoratedPropsComponent =
             decorateComponentWithProps(value.componentName, 'shweta');
-          return (
-            <Fragment key={value.id}>
-              {selectedComponent ===  value.componentTitle ? (
-                <DecoratedPropsComponent />
-              ) : null}
-              {!selectedComponent ? (
-                <button
-                  type="button"
-                  className={css.componentButtons}
-                  onClick={() => selectComponent(value.componentTitle)}
-                >
-                  {value.componentTitle}
-                </button>
-              ) : null}
-            </Fragment>
+          
+          return selectedComponent ===  value.componentTitle ? (
+            <div key={value.id}>
+              {<DecoratedPropsComponent />}
+            </div>
+          ) : null
+        }) : null}
+  
+        {!selectedComponent ? selectedApp.map(value => {
+          return  (
+            <button
+              key={value.id}
+              type="button"
+              className={css.componentButtons}
+              onClick={() => selectComponent(value.componentTitle)}
+              >
+              {value.componentTitle}
+            </button>
           )
-        })}
+        }) : null}
+  
+       
       </Fragment>
     )
   }
