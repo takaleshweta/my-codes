@@ -1,8 +1,9 @@
 import React, {Component, Fragment} from 'react';
 import classNames from 'classnames';
 import DecorateComponent from './DecoratedComponent';
-import CalcApp from '../Components/CalcApp';
-import ToDoApp from '../Components/ToDoApp';
+import CalcApp from '../Components/Calculator/CalcApp';
+import ToDoApp from '../Components/ToDo/ToDoApp';
+import LoanCalculator from '../Components/LoanCalculator/LoanCalculator';
 import css from '../css/common.css';
 
 export default class MainApp extends Component {
@@ -20,6 +21,11 @@ export default class MainApp extends Component {
           id: '2',
           componentName: ToDoApp,
           componentTitle: 'ToDo',
+        },
+        {
+          id: '3',
+          componentName: LoanCalculator,
+          componentTitle: 'Loan Calculator',
         },
       ],
     }
@@ -48,7 +54,7 @@ export default class MainApp extends Component {
           ) : null}
           <h1> {selectedComponent ? selectedComponent : 'Home'} </h1>
         </header>
-        <div className={classNames(css.mainWrapper, selectedComponent ? css.padding16px : '')}>
+        <div className={css.mainWrapper}>
           <DecorateComponent
             selectedApp={selectedApp}
             selectComponent={this.selectComponent}

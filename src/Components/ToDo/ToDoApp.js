@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import css from '../css/todo.css';
+import css from './todo.css';
 
 export default class ToDoApp extends Component {
   constructor(props) {
